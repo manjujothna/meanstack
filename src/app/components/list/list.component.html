@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Employee Details </h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>Designation</th>
+                    <th>operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let obj of employees">
+                    <td>{{obj._id}}</td>
+                    <td>{{obj.name}}</td>
+                    <td>{{obj.designation}}</td>
+                    <td><button class="btn btn-danger" (click)="doDelete(employee)">Delete</button>
+                        <button class="btn btn-primary" (click)="doUpdate(employee)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
